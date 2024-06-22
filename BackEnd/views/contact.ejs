@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style1.css"/>
+    <link rel="stylesheet" type="text/css" href="css/contact.css"/>
+    <title>Fahim Amiri's Profile</title>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("Cg82c8zdEbc64u2BJ"); //public key email js 
+        })();
+    </script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <a href="/" class="logo">Amiri's Contact</a>
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact" class="active">Contact</a></li>
+                <li><a href="team">Teams</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Rest of the contact page content -->
+    <section class="grid-container">
+        <div class="grid-item grid-2">
+            <div class="contact-color">
+                <p class="cell">Cell</p>
+            </div>
+            <div class="contact-color">
+                <p class="email">Emails</p>
+            </div>
+            <div class="contact-color">
+                <p class="add">Address</p>
+            </div>
+        </div>
+
+        <div class="grid-item grid-3">
+            <div class="contact">
+                <p class="cell"> +1 510 395 3347 </p>
+            </div>
+            <div class="contact">
+                <p class="email">Fahim.amiri12@gmail.com</p>
+            </div>
+            <div class="contact">
+                <p class="add">Shore Line Drive, Alameda CA</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- New Form Section -->
+    <section class="form-section">
+        <form id="contact-form">
+            <input type="text" name="from_name" placeholder="Name" required />
+            <input type="email" name="from_email" placeholder="Email" required />
+            <textarea name="message" placeholder="Compose your Email" required></textarea>
+            <div class="button-group">
+                <button type="reset">Clear</button>
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </section>
+    
+    <!-- Contact Me Section -->
+    <section class="grid-item grid-7 contact-me">
+        <p>Ready to elevate your web presence? Let's collaborate and create 
+            a tailored solution that brings your vision to life. Contact me
+             today for expert web design and development services that drive results!</p>
+    </section>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            emailjs.sendForm('service_uwcbsfh', 'template_glubg29', this)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Your message has been sent successfully!');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Failed to send your message. Please try again later.');
+                });
+        });
+    </script>
+</body>
+</html>

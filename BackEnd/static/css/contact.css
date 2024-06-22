@@ -1,0 +1,173 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Navigation Styles */
+.header, footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.header .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    background-color: #fff;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.navigation .logo {
+    font-family: RoadTest, sans-serif;
+    color: #5d5959;
+    font-size: 22px;
+}
+
+.navigation .menu {
+    display: flex;
+}
+
+.navigation .menu li a {
+    margin: 0 15px;
+    font-family: Myriad Pro, sans-serif;
+    color: #505050;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.navigation .menu li a.active {
+    font-weight: bold;
+    color: rgb(242, 137, 8);
+}
+
+/* Grid Container Styles */
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 0;
+    background-color: #fff;
+    width: 80%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.grid-item {
+    flex: 1;
+    margin: 0 20px;
+}
+
+/* Contact Section Styles */
+.contact-color, .contact {
+    background-color:rgb(242, 137, 8);
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact-color p, .contact p {
+    margin: 0;
+    font-size: 18px;
+    color: #ebeae9; /* Matching orange color */
+}
+
+.contact-color {
+    background-color: #555; /* Slightly lighter black */
+}
+
+.contact p.cell {
+    font-weight: bold;
+}
+
+/* Contact Me Section Styles */
+.contact-me {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #333;
+    color: #fff;
+    margin: 50px 20px;
+    border-radius: 10px;
+    
+}
+
+.contact-me p {
+    font-size: 16px;
+    margin: 0;
+    color: #f1efeb; /* Matching orange color */
+}
+
+/* Form Section Styles */
+.form-section-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px; /* Set max-width for responsiveness */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-section textarea {
+    height: 150px;
+    resize: none;
+}
+
+.form-section .button-group {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    width: 100%;
+    margin-top: 10px;
+
+}
+
+.form-section .button-group button {
+    background-color: rgb(242, 137, 8);
+    border: none;
+    color: #333; /* Black text color */
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 10px; /* Add margin between the buttons */
+    width: auto; /* Adjust the width of buttons */
+}
+
+.form-section button:hover {
+    background-color: #ffb74d;
+}
