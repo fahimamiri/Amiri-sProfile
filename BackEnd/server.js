@@ -7,18 +7,20 @@ const path = require("path");
 
 const requestTime = require("./middleware/request-time");
 const router = express.Router();
+
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.use(requestTime);
 
-const PORT = process.env.PORT || 3000;
-
 // Serve static files from the "static" directory in the "backend" folder
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "BackEnd/view"));
 app.set("view engine", "ejs");
+
 app.use(express.static(path.join(__dirname, "static")));
 
-const rootRoutes = require("./routes/root");
+//const rootRoutes = require("./routes/root");
+
 app.use("/", rootRoutes);
 
 // Default route
